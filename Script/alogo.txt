@@ -1,0 +1,72 @@
+
+### Initial Setup
+
+1. **Initialize Global Variables**
+   - `audio` as a new `Audio` object.
+   - `play` as the element with ID `play`.
+   - `sound` as the element with ID `sound`.
+   - `currfloder` as a global variable.
+   - `mp3_remove` and `mp3_list` as global variables (arrays).
+
+### Fetch and Display Songs
+
+2. **Define the `get_data` Function**
+   - Update `currfloder` to the passed `floder` parameter.
+   - Fetch data from the server using `fetch` for the given folder.
+   - Create a temporary `div` element and set its `innerHTML` to the fetched data.
+   - Extract `a` tags from the `div` element and filter out those ending with `.mp3`.
+   - Map the filtered `a` tags to get the list of song names (`mp3_list`).
+   - Create `mp3_remove` by removing the `.mp3` extension from each song name.
+   - Clear the current song list and populate it with the new songs.
+   - Add click event listeners to the song list items to play the selected song.
+
+3. **Define the `playAudio` Function**
+   - Set the `audio` source to the selected song and play it.
+   - Update the play button image to indicate playing.
+   - Display the song name and an image in the song information area.
+
+### Utility Function
+
+4. **Define the `convertSecondsToMinutes` Function**
+   - Convert seconds to a formatted string with minutes and seconds.
+
+### Main Function
+
+5. **Define the `main` Function**
+   - Call `get_data` with the initial folder (`orange`).
+   - Add click event listener to the play button to toggle play/pause.
+   - Add time update event listener to update the time display and progress bar.
+   - Add click event listener to the song bar for seeking.
+   - Add click event listener to the next button to play the next song.
+   - Add event listener for automatic play of the next song when the current song ends.
+   - Add click event listener to the back button to play the previous song.
+   - Add change event listener to the volume input to adjust the audio volume and update the volume icon.
+   - Fetch and display all available albums dynamically.
+   - Add click event listeners to album cards to fetch and display songs for the selected album.
+
+### Display All Songs
+
+6. **Define the `displayALLsongs` Function**
+   - Fetch and parse the list of all available songs.
+   - Extract and display each album with its title and artist.
+   - Add play button and cover image to each album card.
+
+### Start the Main Function
+
+7. **Call the `main` Function**
+   - Execute the main function to initialize the app and set up event listeners.
+
+Here’s the summarized algorithm in steps:
+
+1. Initialize global variables (`audio`, `play`, `sound`, `currfloder`, `mp3_remove`, `mp3_list`).
+2. Define `get_data` function to fetch song data, filter and display songs, and add event listeners.
+3. Define `playAudio` function to update the audio source and play the song, and update the UI.
+4. Define `convertSecondsToMinutes` function to format seconds as minutes and seconds.
+5. Define `main` function to initialize the app:
+   - Call `get_data` with the initial folder.
+   - Add event listeners for play/pause, time update, seeking, next song, previous song, and volume change.
+   - Fetch and display all albums dynamically.
+   - Add event listeners to album cards.
+6. Define `displayALLsongs` function to fetch and display all available albums.
+7. Execute the `main` function to start the app.
+This algorithm outlines the structure and flow of the provided JavaScript code, detailing each step and its purpose.

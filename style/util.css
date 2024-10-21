@@ -1,0 +1,35 @@
+
+.flex {
+    display: flex;
+}
+
+.jcontent {
+    justify-content: space-between;
+
+}
+
+.align {
+    align-items: center;
+}
+.playlist{
+    padding-bottom: 15px;
+    
+}
+button{
+background-color: #20a7db;
+color: #060606;
+}
+button:hover{
+    background-color: #f0f4f5;
+}
+input{
+    color: #20a7db;
+}
+
+
+
+
+
+
+
+
