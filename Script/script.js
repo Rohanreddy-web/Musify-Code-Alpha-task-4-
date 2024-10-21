@@ -12,7 +12,8 @@ async function get_data(floder) {
     //FIXME:  display songs
     let div = document.createElement("div")//not the part of DOM so we can get the a tags for this div
     let pass = div.innerHTML = data//"text"passing to div as innerhtml
-    console.log(pass)
+    let k=div
+    console.log(k)
     let anchor_tags = div.getElementsByTagName("a")//div is the document inside it we have td
     let a = Array.from(anchor_tags)
     let play_songs = a.filter((value) => {
